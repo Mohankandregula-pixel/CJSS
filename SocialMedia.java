@@ -1,44 +1,36 @@
+import java.time.temporal.ValueRange;
 import java.util.*;
 
 public class SocialMedia {
 
-    public static void main(String args[]) {
-        List<String> colors = new ArrayList<>();
-        colors.add("red");
-        colors.add("green");
-        colors.add("blue");
+    public static void main(String args[]){
 
-        for (int i = 0; i < colors.size(); i++) {
-            System.out.println(colors.get(i));
-        }
-
-        for (String color: colors) {
-            System.out.println(color);
-        }
-
-        Set<String> branches = new HashSet<>();
-        branches.add("CSE");
-        branches.add("ECE");
-        branches.add("EEE");
-        branches.add("ECE");
-
-        for (String branch: branches) {
-            System.out.println(branch);
-        }
-
-        Map<String, String> passwords = new HashMap<>();
-        passwords.put("gmail", "gmail_password");
-        passwords.put("hotmail", "hotmail_password");
-
-
-        System.out.println(passwords.get("gmail"));
-
-        for (String key: passwords.keySet()) {
-            System.out.println(passwords.get(key));
-        }
-
-
+    HashMap<String,String> Customer=new HashMap<String,String>();//Creating HashMap    
+    Customer.put("Mohan","Mohan@gmail.com");  //Put elements in Map  
+    Customer.put("M","M@gmail.com");    
+  
+        
+    System.out.println("Customer Details: ");  
+    for(Map.Entry m : Customer.entrySet()){    
+     System.out.println("Name:" + m.getKey()+" Email:"+m.getValue());    
     }
+    
+    List<String> posts = new ArrayList<>();
+    posts.add("POST 1");
+    posts.add("POST 2");
+    posts.add("POST 3");
+    System.out.println("posts: ");
+    for (String post: posts) {
+        System.out.println(post);
+    }
+    Set<String> branches = new HashSet<>();
+    branches.add("CSE");
+    branches.add("ECE");
+    branches.add("EEE");
+    branches.add("ECE");
 
-
-}
+    for (String branch: branches) {
+        System.out.println(branch);
+    }
+    }
+    }
