@@ -55,7 +55,7 @@ public class SocialMedia1 {
 
         List<Posts> postOfCustomer2 = new ArrayList<>();
 
-        Posts post21 = new Posts("p1","m@gamil.com","birthday","Celebration",commentsOfPost1);
+        Posts post21 = new Posts("p1","m@gamil.com","birthday","Celebration",commentsOfPost11);
         Posts post22 = new Posts("p2","m@gamil.com","birthday","Celebration",commentsOfPost12);
 
         postOfCustomer2.add(post1);
