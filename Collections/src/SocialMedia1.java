@@ -48,19 +48,23 @@ public class SocialMedia1 {
             List<Comments> commentsOfC2p1 = new ArrayList<>();
 
 
-            Comments comment1C2p1 = new Comments("p21","m@gmail.com","Nice");
-            Comments comment2C2p1 = new Comments("p21","m@gmail.com","good");
+            Comments comment1C2p1 = new Comments("p21","k@gmail.com","Tik ");
+            Comments comment2C2p1 = new Comments("p21","p@gmail.com","Tok");
 
             commentsOfC2p1.add(comment1C2p1);
             commentsOfC2p1.add(comment2C2p1);
 
                             List<Posts> C1p1 = new ArrayList<>();
 
-                            Posts post11 = new Posts("p11","m@gamil.com","birthday","Celebration",commentsOfC1p1);
-                            Posts post12 = new Posts("p12","m@gamil.com","birthday","Celebration",commentsOfC1p2);
+                            Posts post1C1 = new Posts("p11","m@gamil.com","birthday","Celebration",commentsOfC1p1);
 
-                            C1p1.add(post11);
-                            C1p1.add(post12);
+                            C1p1.add(post1C1);
+
+//                                List<Posts> C1p2 = new ArrayList<>();
+//
+//                                Posts post2C1 = new Posts("p12","m@gamil.com","birthday","Celebration",commentsOfC1p2);
+//
+//                                C1p1.add(post2C1);
 
                             List<Posts> C2p1 = new ArrayList<>();
 
@@ -70,16 +74,33 @@ public class SocialMedia1 {
                             C2p1.add(post21);
                     //        C2p1.add(post22);
 
+
+
         Customer C1 = new Customer("Mohan","m@gamil.com",C1p1);
+//        Customer C1 = new Customer("Mohan","m@gamil.com",C1p2);
         Customer C2 = new Customer("nolan","n@gamil.com",C2p1);
 
         List<Customer> allCustomers = new ArrayList<>();
 
         allCustomers.add(C1);
         allCustomers.add(C2);
+//        1) By using above classes(Customer, Posts, Comments) - Add some dummy data
+//        2) Print all customer details (Name, email)
+
 
         for(Customer cust: allCustomers){
             System.out.println("Email: " + cust.getEmail() + "  Name: " + cust.getName());
+        }
+//        3) Print all Posts (customer name, heading, description)
+        for(Posts postOfAll: C1p1){
+            System.out.println("Heading: " + postOfAll.getHeading() + "/ Description: " + postOfAll.getDescription());
+        }
+        for(Posts postOfAll: C2p1){
+            System.out.println("Heading: " +postOfAll.getHeading() +"/ Description: " + postOfAll.getDescription());
+        }
+//        4) Print all comments (post initiated customer name, heading, description, comment, commented customer name)
+        for(Comments allComments: commentsOfC1p2){
+            System.out.println("Comment:  " + allComments.getComment() + "/ Mail id : " + allComments.getEmail() + "/ Post id is : " +  allComments.getPostId());
         }
 
     }
