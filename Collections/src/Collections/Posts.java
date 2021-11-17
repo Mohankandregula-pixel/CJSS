@@ -1,7 +1,7 @@
 package Collections;
 import java.util.List;
 public class Posts {
-    //        postId
+//        postId
 //        email (Customer email)
 //        heading
 //        description
