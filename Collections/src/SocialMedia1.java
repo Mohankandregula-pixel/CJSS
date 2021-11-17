@@ -102,6 +102,9 @@ public class SocialMedia1 {
         for(Comments allComments: commentsOfC1p2){
             System.out.println("Comment:  " + allComments.getComment() + "/ Mail id : " + allComments.getEmail() + "/ Post id is : " +  allComments.getPostId());
         }
+        for(Comments allComments: commentsOfC2p1){
+            System.out.println("Comment:  " + allComments.getComment() + "/ Mail id : " + allComments.getEmail() + "/ Post id is : " +  allComments.getPostId());
+        }
 
     }
 }
