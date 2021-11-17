@@ -27,51 +27,51 @@ import java.util.ArrayList;
 public class SocialMedia1 {
     public static void main( String args[]){
 
-        List<Comments> commentsOfPost11 = new ArrayList<>();
+        List<Comments> commentsOfC1p1 = new ArrayList<>();
 
 
-        Comments comment11 = new Comments("p11","m@gmail.com","Nice");
-        Comments comment12 = new Comments("p11","m@gmail.com","good");
+        Comments comment1C1p1 = new Comments("p11","m@gmail.com","Nice");
+        Comments comment2C1p1 = new Comments("p11","m@gmail.com","good");
 
-        commentsOfPost11.add(comment11);
-        commentsOfPost11.add(comment12);
+        commentsOfC1p1.add(comment1C1p1);
+        commentsOfC1p1.add(comment2C1p1);
 
-        List<Comments> commentsOfPost12 = new ArrayList<>();
-
-
-        Comments comment121 = new Comments("p12","m@gmail.com","Nice");
-        Comments comment122 = new Comments("p12","m@gmail.com","good");
-
-        commentsOfPost12.add(comment121);
-        commentsOfPost12.add(comment122);
-
-        List<Comments> commentsOfPost21 = new ArrayList<>();
+        List<Comments> commentsOfC1p2 = new ArrayList<>();
 
 
-        Comments comment21 = new Comments("p21","m@gmail.com","Nice");
-        Comments comment22 = new Comments("p21","m@gmail.com","good");
+        Comments comment1C1p2 = new Comments("p12","m@gmail.com","Nice");
+        Comments comment2C1p2 = new Comments("p12","m@gmail.com","good");
 
-        commentsOfPost21.add(comment21);
-        commentsOfPost21.add(comment22);
+        commentsOfC1p2.add(comment1C1p2);
+        commentsOfC1p2.add(comment2C1p2);
 
-        List<Posts> postOfCustomer1 = new ArrayList<>();
+            List<Comments> commentsOfC2p1 = new ArrayList<>();
 
-        Posts post11 = new Posts("p11","m@gamil.com","birthday","Celebration",commentsOfPost11);
-        Posts post12 = new Posts("p12","m@gamil.com","birthday","Celebration",commentsOfPost12);
 
-        postOfCustomer1.add(post11);
-        postOfCustomer1.add(post12);
+            Comments comment1C2p1 = new Comments("p21","m@gmail.com","Nice");
+            Comments comment2C2p1 = new Comments("p21","m@gmail.com","good");
 
-        List<Posts> postOfCustomer2 = new ArrayList<>();
+            commentsOfC2p1.add(comment1C2p1);
+            commentsOfC2p1.add(comment2C2p1);
 
-        Posts post21 = new Posts("p21","m@gamil.com","birthday","Celebration",commentsOfPost21);
-//        Posts post22 = new Posts("p22","m@gamil.com","birthday","Celebration",commentsOfPost22);
+                            List<Posts> C1p1 = new ArrayList<>();
 
-        postOfCustomer2.add(post21);
-//        postOfCustomer2.add(post22);
+                            Posts post11 = new Posts("p11","m@gamil.com","birthday","Celebration",commentsOfC1p1);
+                            Posts post12 = new Posts("p12","m@gamil.com","birthday","Celebration",commentsOfC1p2);
 
-        Customer C1 = new Customer("Mohan","m@gamil.com",postOfCustomer1);
-        Customer C2 = new Customer("nolan","n@gamil.com",postOfCustomer2);
+                            C1p1.add(post11);
+                            C1p1.add(post12);
+
+                            List<Posts> C2p1 = new ArrayList<>();
+
+                            Posts post21 = new Posts("p21","m@gamil.com","birthday","Celebration",commentsOfC2p1);
+                    //        Posts post22 = new Posts("p22","m@gamil.com","birthday","Celebration",commentsOfPost22);
+
+                            C2p1.add(post21);
+                    //        C2p1.add(post22);
+
+        Customer C1 = new Customer("Mohan","m@gamil.com",C1p1);
+        Customer C2 = new Customer("nolan","n@gamil.com",C2p1);
 
         List<Customer> allCustomers = new ArrayList<>();
 
@@ -79,7 +79,7 @@ public class SocialMedia1 {
         allCustomers.add(C2);
 
         for(Customer cust: allCustomers){
-            System.out.println(cust.getEmail());
+            System.out.println("Email: " + cust.getEmail() + "  Name: " + cust.getName());
         }
 
     }
